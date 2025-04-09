@@ -20,42 +20,6 @@ variable "compartment_description" {
   default     = "test-compartment description"
 }
 
-############################################
-# VCN
-############################################
-
-variable "vcn1" {
-  description = "Here you'll find the details of VCN1."
-  default = {
-    cidr_blocks : ["10.23.0.0/20"]
-    display_name : "vcn01"
-  }
-}
-
-############################################
-# Public Subnet, Route Table, and Internet Gateway
-############################################
-
-variable "subnetA_pub" {
-  description = "The details of the subnet"
-  default = {
-    cidr_block : "10.23.11.0/24"
-    display_name : "IC_pub_snet-A"
-    is_public : true
-    route_table : {
-      display_name = "routeTable-Apub"
-      description  = "routeTable-Apub"
-    }
-  }
-}
-
-variable "internet_gateway_AA" {
-  description = "The details of the internet gateway"
-  default = {
-    display_name : "IC_IG-A"
-    ig_destination = "0.0.0.0/0"
-  }
-}
 
 ############################################
 # Compute Instance

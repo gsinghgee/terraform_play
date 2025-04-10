@@ -3,7 +3,7 @@ name: Test Terraform on OCI
 
 jobs:
   Terraform-on-OCI:
-    runs-on: "Oracle Linux 9.0"
+    runs-on: Oracle Linux 9.0
     defaults: 
       run:
         shell:bash

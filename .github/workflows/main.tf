@@ -40,11 +40,6 @@ resource "oci_core_instance" "ic_pub_vm-A" {
     }
   }
 
-  create_vnic_details {
-    subnet_id        = oci_core_subnet.subnetA_pub.id
-    assign_public_ip = var.ic_pub_vm_A.assign_public_ip
-  }
-
   metadata = {
     ssh_authorized_keys = join("\n", [for k in var.ic_pub_vm_A.ssh_authorized_keys : chomp(k)])
   }

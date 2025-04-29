@@ -1,6 +1,6 @@
-# main-vars.tf
+            # main-vars.tf
 ############################################
-# Compartments
+            # Compartments
 ############################################
 
 variable "compartment_id" {
@@ -21,9 +21,9 @@ variable "compartment_description" {
 }
 
 
-############################################
-# Compute Instance
-############################################
+#################################################
+            # Compute Instance
+#################################################
 
 variable "ic_pub_vm_A" {
   description = "Here you'll see the details of the compute instance"

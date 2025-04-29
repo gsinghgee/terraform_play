@@ -22,12 +22,12 @@ resource "oci_identity_compartment" "example_compartment" {
 
 resource "oci_core_instance" "ic_pub_vm-A" {
   compartment_id      = oci_identity_compartment.example_compartment.id
-  shape               = var.ic_pub_vm_A.shape.name
-  availability_domain = var.ic_pub_vm_A.availability_domain
-  display_name        = var.ic_pub_vm_A.display_name
+  shape               = var.ic_pub_vm_G.shape.name
+  availability_domain = var.ic_pub_vm_G.availability_domain
+  display_name        = var.ic_pub_vm_G.display_name
 
   source_details {
-    source_id   = var.ic_pub_vm_A.image_ocid
+    source_id   = var.ic_pub_vm_G.image_ocid
     source_type = "image"
   }
 
@@ -35,8 +35,8 @@ resource "oci_core_instance" "ic_pub_vm-A" {
     for_each = [true]
     content {
       #Optional
-      memory_in_gbs = var.ic_pub_vm_A.shape.memory_in_gbs
-      ocpus         = var.ic_pub_vm_A.shape.ocpus
+      memory_in_gbs = var.ic_pub_vm_G.shape.memory_in_gbs
+      ocpus         = var.ic_pub_vm_G.shape.ocpus
     }
   }
 

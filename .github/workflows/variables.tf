@@ -1,4 +1,37 @@
             # main-vars.tf
+
+############################################
+            # Provider Variables
+############################################
+
+variable "user_ocid" {
+description = "user OCID used to access OCI"
+type = string
+}
+
+variable "fingerprint" {
+description = "fingerprint for RSA keys for User"
+type = string
+}
+
+variable "private_key_path" {
+description = "Private Key Path"
+type = string
+}
+
+
+variable "tenancy_ocid" {
+description = "Tenancy id where to create the resources"
+type = string
+}
+
+
+variable "region" {
+# List of regions: https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm#ServiceAvailabilityAcrossRegions
+description = "OCI Region that will house the resources"
+type = string
+}
+
 ############################################
             # Compartments
 ############################################
